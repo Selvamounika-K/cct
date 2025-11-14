@@ -1,0 +1,11 @@
+cd downloads
+ssh -i "vpc-lab-keys.pem" ec2-user@ec2-3-107-241-57.ap-southeast-2.compute.amazonaws.com
+sudo yum install mariadb105 -y
+ mysql -h db.cjeoguikstaf.ap-southeast-2.rds.amazonaws.com -P 3306 -u admin -p
+
+password : Mounika8
+
+use db1;
+INSERT INTO users(name,email) VALUES('Alice','alice@example.com');
+SELECT * FROM users;
+UPDATE users SET email='new@example.com' WHERE name='Alice';
